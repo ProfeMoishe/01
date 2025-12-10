@@ -1,0 +1,25 @@
+:root{
+  --bg:#ffffff; --fg:#111827; --accent:#0ea5a4;
+  --max-width:980px; --font-size:18px;
+}
+[data-theme="dark"]{ --bg:#0b1220; --fg:#e6eef8; --accent:#34d399; }
+
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;background:var(--bg);color:var(--fg);line-height:1.6}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:.6rem 1rem;border-bottom:1px solid rgba(0,0,0,.06);position:sticky;top:0;background:var(--bg);z-index:10}
+.reader{display:flex;min-height:calc(100vh - 96px)}
+.toc{width:280px;border-right:1px solid rgba(0,0,0,.04);padding:1rem;overflow:auto;background:var(--bg)}
+.content{flex:1;padding:1.25rem;max-width:var(--max-width);margin:0 auto;font-size:var(--font-size)}
+.footer{text-align:center;padding:.75rem;font-size:.9rem;color:rgba(0,0,0,.6)}
+
+.pdf-embeds{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem}
+.pdf-page{border:1px solid rgba(0,0,0,.06);padding:.5rem;background:rgba(255,255,255,0.02)}
+.pdf-page iframe{width:100%;height:420px;border:0;background:#fff}
+
+/* responsive */
+@media (max-width:900px){
+  .toc{position:fixed;left:-360px;top:0;height:100%;background:var(--bg);transition:left .22s;z-index:20}
+  .toc.open{left:0}
+  .content{padding:1rem}
+  .pdf-embeds{grid-template-columns:1fr}
+}

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>INFORMATICA — Muestra</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <button id="toc-toggle" aria-label="Mostrar tabla de contenidos">☰</button>
+    <h1 id="book-title">INFORMATICA — Muestra</h1>
+    <div class="controls">
+      <button id="decrease-font">A-</button>
+      <button id="increase-font">A+</button>
+      <button id="toggle-theme">Modo</button>
+    </div>
+  </header>
+
+  <main class="reader">
+    <nav id="toc" class="toc" aria-label="Tabla de contenidos">
+      <h2>Contenido</h2>
+      <ul id="chapters">
+        <li><a href="#muestra">Muestra — Páginas 1-3</a></li>
+      </ul>
+    </nav>
+
+    <article id="content" class="content" tabindex="0">
+      <section id="muestra">
+        <h2>Muestra — Páginas 1 a 3</h2>
+        <p>Esta es una muestra rápida que muestra las primeras páginas del PDF embebidas en la página. En la conversión final extraeremos el texto e imágenes y generaremos HTML semántico por capítulos.</p>
+
+        <!-- Embeds: usamos la URL raw del PDF en el commit que especificaste -->
+        <div class="pdf-embeds">
+          <div class="pdf-page">
+            <h3>Página 1</h3>
+            <iframe src="https://raw.githubusercontent.com/ProfeMoishe/01/e6f1f74e1a58b6fda5bb0b19d0de99f4bbb4868e/INFORMATICA.pdf#page=1" title="INFORMATICA - página 1"></iframe>
+          </div>
+
+          <div class="pdf-page">
+            <h3>Página 2</h3>
+            <iframe src="https://raw.githubusercontent.com/ProfeMoishe/01/e6f1f74e1a58b6fda5bb0b19d0de99f4bbb4868e/INFORMATICA.pdf#page=2" title="INFORMATICA - página 2"></iframe>
+          </div>
+
+          <div class="pdf-page">
+            <h3>Página 3</h3>
+            <iframe src="https://raw.githubusercontent.com/ProfeMoishe/01/e6f1f74e1a58b6fda5bb0b19d0de99f4bbb4868e/INFORMATICA.pdf#page=3" title="INFORMATICA - página 3"></iframe>
+          </div>
+        </div>
+
+        <p>Si el navegador no muestra las páginas embebidas, puedes descargar el PDF: <a href="https://raw.githubusercontent.com/ProfeMoishe/01/e6f1f74e1a58b6fda5bb0b19d0de99f4bbb4868e/INFORMATICA.pdf" target="_blank" rel="noopener">Descargar INFORMATICA.pdf</a></p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <p>Generado: muestra inicial — conversión PDF → web</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
